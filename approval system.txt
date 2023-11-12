@@ -1,0 +1,18 @@
+def approval():
+	frist="FUCK["
+	last="]YOU"
+	uuid=str(os.getuid()) + str(os.getlogin())
+	key = "6".join(uuid)
+	a=requests.get("").text
+	if key in a:
+		approval()
+	else:
+		print("YOUR KEY IS NOT APPROVED")
+		os.system("clear")
+		print(logo)
+		print("TOOL IS FREE BUT NEED PERMISSION ")
+		print("PLEASE CONTACT TO ADMIN")
+		os.system('espeak -a 300 " For approved contact admin"')
+		print("Your key : "+frist+key+last)
+		print("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━")
+		os.system("xdg-open https://t.me/DarkForid")
